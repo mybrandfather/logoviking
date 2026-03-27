@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>API Docs — Logo Viking</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.api-page { padding-top: calc(var(--nav-h) + 60px); padding-bottom: 100px; }
+.api-layout { display:grid; grid-template-columns:240px 1fr; gap:48px; align-items:flex-start; }
+.api-sidebar { position:sticky; top:calc(var(--nav-h) + 20px); }
+.api-sidebar h4 { font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--text2); margin-bottom:12px; font-family:var(--font-head); }
+.api-sidebar a { display:block; padding:6px 0; font-size:0.88rem; color:var(--text2); transition:color 0.2s; border-left:2px solid transparent; padding-left:12px; margin-left:-12px; }
+.api-sidebar a:hover, .api-sidebar a.active { color:var(--accent2); border-left-color:var(--accent2); }
+.api-content h1 { font-family:var(--font-head); font-size:2.2rem; font-weight:800; margin-bottom:12px; }
+.api-content h2 { font-family:var(--font-head); font-size:1.3rem; font-weight:800; margin:36px 0 12px; padding-top:36px; border-top:1px solid var(--border); }
+.api-content p { color:var(--text2); margin-bottom:16px; line-height:1.7; }
+.api-content pre { background:var(--bg2); border:1px solid var(--border); border-radius:10px; padding:20px; overflow-x:auto; font-size:0.83rem; line-height:1.7; margin-bottom:16px; }
+.endpoint { background:var(--bg2); border:1px solid var(--border); border-radius:10px; padding:20px; margin-bottom:16px; }
+.endpoint-method { display:inline-block; padding:3px 10px; border-radius:6px; font-size:0.72rem; font-weight:700; margin-right:10px; }
+.method-post { background:rgba(16,185,129,0.15); color:#10b981; }
+.method-get { background:rgba(59,130,246,0.15); color:#3b82f6; }
+.endpoint-path { font-family:monospace; font-size:0.9rem; }
+.endpoint-desc { font-size:0.85rem; color:var(--text2); margin-top:8px; }
+.param-table { width:100%; border-collapse:collapse; font-size:0.85rem; }
+.param-table th { text-align:left; padding:8px 12px; border-bottom:2px solid var(--border); color:var(--text2); font-size:0.75rem; text-transform:uppercase; letter-spacing:0.06em; }
+.param-table td { padding:10px 12px; border-bottom:1px solid var(--border); }
+.param-name { font-family:monospace; color:var(--accent2); }
+.param-type { color:var(--orange); font-size:0.78rem; }
+.param-req { color:var(--red); font-size:0.72rem; font-weight:700; }
+@media(max-width:768px){.api-layout{grid-template-columns:1fr}.api-sidebar{display:none}}
+</style>
+</head>
+<body>
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-icon">⚔</span><span>Logo<strong>Viking</strong></span></a>
+    <div class="nav-actions" style="margin-left:auto">
+      <button class="theme-toggle" id="themeToggle">☀</button>
+      <a href="login.html" class="btn-ghost">Log in</a>
+      <a href="register.html" class="btn-primary">Sign up free</a>
+    </div>
+  </div>
+</nav>
+<main class="api-page">
+  <div class="container">
+    <div class="api-layout">
+      <aside class="api-sidebar">
+        <h4>Getting Started</h4>
+        <a href="#intro" class="active">Introduction</a>
+        <a href="#auth">Authentication</a>
+        <a href="#errors">Errors</a>
+        <h4 style="margin-top:20px">Endpoints</h4>
+        <a href="#compress">Compress</a>
+        <a href="#resize">Resize</a>
+        <a href="#convert">Convert</a>
+        <a href="#removebg">Remove BG</a>
+        <a href="#upscale">Upscale</a>
+        <h4 style="margin-top:20px">SDKs</h4>
+        <a href="#nodejs">Node.js</a>
+        <a href="#python">Python</a>
+        <a href="#php">PHP</a>
+      </aside>
+      <div class="api-content">
+        <h1 id="intro">Logo Viking API</h1>
+        <p>The Logo Viking API lets you integrate all 16 image processing tools into your applications. Built on REST with JSON responses. Available on Pro and Business plans.</p>
+        
+        <div style="background:rgba(124,58,237,0.08);border:1px solid rgba(124,58,237,0.2);border-radius:10px;padding:16px;margin-bottom:24px;font-size:0.88rem">
+          🔑 Base URL: <code style="color:var(--accent2)">https://api.logoviking.com/v1</code>
+        </div>
+
+        <h2 id="auth">Authentication</h2>
+        <p>Authenticate by passing your API key in the Authorization header of every request.</p>
+        <pre><code><span class="c-comment"># Include in all requests</span>
+Authorization: Bearer <span class="c-str">lv_live_your_api_key_here</span></code></pre>
+        <p>Find your API key in your <a href="login.html" style="color:var(--accent2)">account dashboard</a> under Settings → API.</p>
+
+        <h2 id="compress">Compress Image</h2>
+        <div class="endpoint">
+          <span class="endpoint-method method-post">POST</span>
+          <span class="endpoint-path">/compress</span>
+          <div class="endpoint-desc">Compress an image while maintaining visual quality.</div>
+        </div>
+        <table class="param-table">
+          <thead><tr><th>Parameter</th><th>Type</th><th>Required</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td class="param-name">file</td><td class="param-type">File</td><td class="param-req">Required</td><td>Image file (max 200MB on Pro)</td></tr>
+            <tr><td class="param-name">quality</td><td class="param-type">Integer</td><td>Optional</td><td>Quality 1-100 (default: 80)</td></tr>
+            <tr><td class="param-name">output_format</td><td class="param-type">String</td><td>Optional</td><td>jpeg, png, webp (default: original)</td></tr>
+          </tbody>
+        </table>
+        <pre><code><span class="c-key">const</span> formData = <span class="c-key">new</span> FormData();
+formData.append(<span class="c-str">'file'</span>, imageFile);
+formData.append(<span class="c-str">'quality'</span>, <span class="c-num">80</span>);
+formData.append(<span class="c-str">'output_format'</span>, <span class="c-str">'webp'</span>);
+
+<span class="c-key">const</span> response = <span class="c-key">await</span> fetch(<span class="c-str">'https://api.logoviking.com/v1/compress'</span>, {
+  method: <span class="c-str">'POST'</span>,
+  headers: { Authorization: <span class="c-str">'Bearer YOUR_KEY'</span> },
+  body: formData
+});
+
+<span class="c-key">const</span> { url, original_size, compressed_size, savings_pct } = <span class="c-key">await</span> response.json();</code></pre>
+
+        <h2 id="resize">Resize Image</h2>
+        <div class="endpoint">
+          <span class="endpoint-method method-post">POST</span>
+          <span class="endpoint-path">/resize</span>
+          <div class="endpoint-desc">Resize an image to specified dimensions.</div>
+        </div>
+        <pre><code><span class="c-comment">// Example response</span>
+{
+  <span class="c-str">"url"</span>: <span class="c-str">"https://cdn.logoviking.com/results/abc123.jpg"</span>,
+  <span class="c-str">"original_size"</span>: <span class="c-num">204800</span>,
+  <span class="c-str">"new_size"</span>: <span class="c-num">56320</span>,
+  <span class="c-str">"width"</span>: <span class="c-num">1920</span>,
+  <span class="c-str">"height"</span>: <span class="c-num">1080</span>,
+  <span class="c-str">"expires_at"</span>: <span class="c-str">"2026-03-26T02:00:00Z"</span>
+}</code></pre>
+
+        <h2 id="nodejs">Node.js SDK</h2>
+        <pre><code>npm install logoviking-api</code></pre>
+        <pre><code><span class="c-key">const</span> LogoViking = <span class="c-fn">require</span>(<span class="c-str">'logoviking-api'</span>);
+<span class="c-key">const</span> pf = <span class="c-key">new</span> LogoViking({ apiKey: <span class="c-str">'lv_live_...'</span> });
+
+<span class="c-comment">// Compress</span>
+<span class="c-key">const</span> result = <span class="c-key">await</span> pf.compress(<span class="c-str">'./photo.jpg'</span>, { quality: <span class="c-num">80</span> });
+
+<span class="c-comment">// Resize</span>
+<span class="c-key">const</span> resized = <span class="c-key">await</span> pf.resize(<span class="c-str">'./photo.jpg'</span>, { width: <span class="c-num">1200</span>, height: <span class="c-num">800</span> });
+
+<span class="c-comment">// Remove Background</span>
+<span class="c-key">const</span> nobg = <span class="c-key">await</span> pf.removeBg(<span class="c-str">'./photo.jpg'</span>);</code></pre>
+
+        <h2 id="python">Python SDK</h2>
+        <pre><code>pip install logoviking</code></pre>
+        <pre><code><span class="c-key">from</span> logoviking <span class="c-key">import</span> LogoViking
+
+pf = LogoViking(api_key=<span class="c-str">"lv_live_..."</span>)
+
+<span class="c-comment"># Compress image</span>
+result = pf.compress(<span class="c-str">"photo.jpg"</span>, quality=<span class="c-num">80</span>)
+print(result.savings_pct)  <span class="c-comment"># 62</span></code></pre>
+      </div>
+    </div>
+  </div>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

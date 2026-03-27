@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="pageTitle">Tool — LogoViking</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="tool.css">
+</head>
+<body>
+
+<!-- NAV (same as main) -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">⚔</span>
+      <span>Logo<strong>Viking</strong></span>
+    </a>
+    <div class="nav-actions" style="margin-left:auto">
+      <button class="theme-toggle" id="themeToggle">☀</button>
+      <a href="login.html" class="btn-ghost">Log in</a>
+      <a href="register.html" class="btn-primary">Sign up free</a>
+    </div>
+  </div>
+</nav>
+
+<!-- TOOL MAIN -->
+<main class="tool-main">
+  <div class="tool-header">
+    <a href="index.html" class="back-link">← All tools</a>
+    <div class="tool-hero-icon" id="toolHeroIcon"></div>
+    <h1 id="toolTitle">Tool</h1>
+    <p id="toolDesc" class="tool-hero-desc"></p>
+    <div class="format-badges" id="formatBadges"></div>
+  </div>
+
+  <!-- DROPZONE -->
+  <div class="tool-workspace" id="toolWorkspace">
+    <div class="dropzone" id="dropzone">
+      <div class="dz-inner" id="dzInner">
+        <div class="dz-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M24 4v28M14 14l10-10 10 10"/>
+            <path d="M8 36v4a2 2 0 002 2h28a2 2 0 002-2v-4"/>
+          </svg>
+        </div>
+        <div class="dz-text">Drop your images here</div>
+        <div class="dz-sub">or <label class="dz-browse" for="fileInput">browse files</label></div>
+        <div class="dz-formats" id="dzFormats">JPG, PNG, WebP, GIF, BMP, TIFF</div>
+        <input type="file" id="fileInput" multiple accept="image/*" style="display:none">
+      </div>
+    </div>
+
+    <!-- SETTINGS PANEL -->
+    <div class="settings-panel" id="settingsPanel" style="display:none">
+      <h3>Settings</h3>
+      <div id="toolSettings"></div>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="results-panel" id="resultsPanel" style="display:none">
+      <div class="results-header">
+        <h3>Results <span id="resultCount"></span></h3>
+        <button class="btn-download-all" id="downloadAllBtn">⬇ Download All</button>
+      </div>
+      <div class="results-list" id="resultsList"></div>
+    </div>
+  </div>
+</main>
+
+<!-- RELATED TOOLS -->
+<section class="related-tools">
+  <div class="container">
+    <h2>You might also like</h2>
+    <div class="related-grid" id="relatedGrid"></div>
+  </div>
+</section>
+
+<script src="app.js"></script>
+<script src="tool.js"></script>
+</body>
+</html>

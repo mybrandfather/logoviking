@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logo Viking — Powerful Image Tools for Creators</title>
+<meta name="description" content="Logo Viking — 16 free online image tools for designers. Compress, resize, crop, convert, remove background and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">⚔</span>
+      <span>Logo<strong>Viking</strong></span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <div class="nav-dropdown">
+        <button class="nav-btn">Tools ▾</button>
+        <div class="dropdown-panel">
+          <div class="dropdown-col">
+            <span class="dropdown-label">Optimize</span>
+            <a href="tool.html?t=compress">Compress Image</a>
+            <a href="tool.html?t=upscale">AI Upscale</a>
+            <a href="tool.html?t=removebg">Remove Background</a>
+          </div>
+          <div class="dropdown-col">
+            <span class="dropdown-label">Edit</span>
+            <a href="tool.html?t=resize">Resize Image</a>
+            <a href="tool.html?t=crop">Crop Image</a>
+            <a href="tool.html?t=rotate">Rotate Image</a>
+            <a href="tool.html?t=watermark">Watermark Image</a>
+          </div>
+          <div class="dropdown-col">
+            <span class="dropdown-label">Convert</span>
+            <a href="tool.html?t=tojpg">Convert to JPG</a>
+            <a href="tool.html?t=topng">Convert to PNG</a>
+            <a href="tool.html?t=towebp">Convert to WebP</a>
+            <a href="tool.html?t=toavif">Convert to AVIF</a>
+          </div>
+          <div class="dropdown-col">
+            <span class="dropdown-label">Create & More</span>
+            <a href="tool.html?t=meme">Meme Generator</a>
+            <a href="tool.html?t=palette">Color Palette</a>
+            <a href="tool.html?t=screenshot">Screenshot Beautifier</a>
+            <a href="tool.html?t=exif">Remove EXIF Data</a>
+            <a href="tool.html?t=blurface">Blur Faces</a>
+            <a href="tool.html?t=imgpdf">Image to PDF</a>
+          </div>
+        </div>
+      </div>
+      <a href="pricing.html" class="nav-link">Pricing</a>
+      <a href="api.html" class="nav-link">API</a>
+    </div>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" title="Toggle dark mode">☀</button>
+      <a href="login.html" class="btn-ghost">Log in</a>
+      <a href="register.html" class="btn-primary">Sign up free</a>
+      <button class="hamburger" id="hamburger">☰</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="container">
+    <div class="badge-pill">⚔ Free forever · No signup required</div>
+    <h1 class="hero-title">Crush Your Images<br><em>Like a Viking</em></h1>
+    <p class="hero-sub">16 powerful image tools. Zero installs. Free forever. Built for creators.</p>
+    <div class="hero-cta">
+      <a href="#tools" class="btn-hero">Explore all tools →</a>
+      <a href="pricing.html" class="btn-hero-ghost">See plans</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><strong>50M+</strong><span>Images processed</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><strong>16</strong><span>Image tools</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><strong>100%</strong><span>Browser-based</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FILTER TABS -->
+<section class="tools-section" id="tools">
+  <div class="container">
+    <div class="section-header">
+      <h2>Pick your tool</h2>
+      <p>All tools work directly in your browser — no uploads to our servers unless you choose to.</p>
+    </div>
+    <div class="filter-tabs" id="filterTabs">
+      <button class="tab active" data-filter="all">All</button>
+      <button class="tab" data-filter="optimize">Optimize</button>
+      <button class="tab" data-filter="edit">Edit</button>
+      <button class="tab" data-filter="convert">Convert</button>
+      <button class="tab" data-filter="create">Create</button>
+      <button class="tab" data-filter="security">Security</button>
+    </div>
+    <div class="tools-grid" id="toolsGrid">
+
+      <!-- Optimize -->
+      <a href="tool.html?t=compress" class="tool-card" data-cat="optimize">
+        <div class="tool-icon" style="--c:#f97316">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <div class="tool-info">
+          <h3>Compress Image</h3>
+          <p>Shrink JPG, PNG, WebP & GIF without visible quality loss.</p>
+        </div>
+        <span class="tool-arrow">→</span>
+      </a>
+
+      <a href="tool.html?t=upscale" class="tool-card" data-cat="optimize">
+        <div class="tool-badge">AI</div>
+        <div class="tool-icon" style="--c:#8b5cf6">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+        </div>
+        <div class="tool-info">
+          <h3>AI Upscale</h3>
+          <p>Enlarge images 2x–4x using AI with stunning clarity.</p>
+        </div>
+        <span class="tool-arrow">→</span>
+      </a>
+
+      <a href="tool.html?t=removebg" class="tool-card" data-cat="optimize">
+        <div class="tool-badge">AI</div>
+        <div class="tool-icon" style="--c:#ec4899">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
+        </div>
+        <div class="tool-info">
+          <h3>Remove Background</h3>
+          <p>Auto-detect and remove image backgrounds in one click.</p>
+        </div>
+        <span class="tool-arrow">→</span>
+      </a>
+
+      <!-- Edit -->
+      <a href="tool.html?t=resize" class="tool-card" data-cat="edit">
+        <div class="tool-icon" style="--c:#3b82f6">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18"/></svg>
+        </div>
+        <div class="tool-info">
+          <h3>Resize Image</h3>
+          <p>Set exact dimensions by pixel or percentage. Batch resize.</p>
+        </div>
+        <span class="tool-arrow">→</span>
+      </a>
+
+      <a href="tool.html?t=crop" class="tool-card" data-cat="edit">
+        <div class="tool-icon" style="--c:#10b981">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 2 6 6 2 6"/><polyline points="18 22 18 18 22 18"/><rect x="6" y="6" width="12" height="12"/></svg>
+        </div>
+        <div class="tool-info">
+          <h3>Crop Image</h3>
+          <p>Visual crop with aspect ratio presets: square, 16:9, A4 and more.</p>
+        </div>
+        <span class="tool-arrow">→</span>
+      </a>
+
+      <a href="tool.html?t=rotate" class="tool-card" data-cat="edit">
+        <div class="tool-icon" style="--c:#f59e0b">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4.5"/></svg>
+        </div>
+        <div class="tool-info">
+          <h3>Rotate Image</h3>
+          <p>Rotate or flip images. Batch-rotate all landscape or portrait.</p>
+        </div>
+        <span class="tool-arrow">→</span>
+      </a>
+
+      <a href="tool.html?t=watermark" class="tool-card" data-cat="edit">
+        <div class="tool-icon" style="--c:#6366f1">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="tool-info">
+          <h3>Watermark Image</h3>
+          <p>Add text or logo watermarks with custom position & opacity.</p>
+        </div>
+        <span class="tool-arrow">→</span>
+      </a>
+
+      <!-- Convert -->
+      <a href="tool.html?t=tojpg" class="tool-card" data-cat="convert">
+        <div class="tool-icon" style="--c:#ef4444">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/></svg>
+        </div>
+        <div class="tool-info">
+          <h3>Convert to JPG</h3>
+          <p>Convert PNG, GIF, WEBP, HEIC, RAW, TIF to JPG in bulk.</p>
+        </div>
+        <span class="tool-arrow">→</span>
+      </a>
+
+      <a href="tool.html?t=topng" class="tool-card" data-cat="convert">
+        <div class="tool-icon" style="--c:#06b6d4">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <div class="tool-info">
+          <h3>Convert to PNG</h3>
+          <p>Turn JPG, WEBP, GIF & more to lossless PNG format.</p>
+        </div>
+        <span class="tool-arrow">→</span>
+      </a>
+
+      <a href="tool.html?t=towebp" class="tool-card" data-cat="convert">
+        <div class="tool-badge">New</div>
+        <div class="tool-icon" style="--c:#84cc16">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <div class="tool-info">
+          <h3>Convert to WebP</h3>
+          <p>Convert any image to modern WebP for 30% smaller file size.</p>
+        </div>
+        <span class="tool-arrow">→</span>
+      </a>
+
+      <a href="tool.html?t=toavif" class="tool-card" data-cat="convert">
+        <div class="tool-badge">New</div>
+        <div class="tool-icon" style="--c:#a78bfa">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div class="tool-info">
+          <h3>Convert to AVIF</h3>
+          <p>Next-gen format with best-in-class compression quality.</p>
+        </div>
+        <span class="tool-arrow">→</span>
+      </a>
+
+      <!-- Create -->
+      <a href="tool.html?t=meme" class="tool-card" data-cat="create">
+        <div class="tool-icon" style="--c:#f97316">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+        </div>
+        <div class="tool-info">
+          <h3>Meme Generator</h3>
+          <p>Caption meme templates or upload your own. Export instantly.</p>
+        </div>
+        <span class="tool-arrow">→</span>
+      </a>
+
+      <a href="tool.html?t=palette" class="tool-card" data-cat="create">
+        <div class="tool-badge">New</div>
+        <div class="tool-icon" style="--c:#ec4899">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+        </div>
+        <div class="tool-info">
+          <h3>Color Palette Extractor</h3>
+          <p>Extract dominant colors from any image. Copy hex codes.</p>
+        </div>
+        <span class="tool-arrow">→</span>
+      </a>
+
+      <a href="tool.html?t=screenshot" class="tool-card" data-cat="create">
+        <div class="tool-badge">New</div>
+        <div class="tool-icon" style="--c:#14b8a6">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <div class="tool-info">
+          <h3>Screenshot Beautifier</h3>
+          <p>Wrap screenshots in gorgeous frames, gradients & shadows.</p>
+        </div>
+        <span class="tool-arrow">→</span>
+      </a>
+
+      <a href="tool.html?t=imgpdf" class="tool-card" data-cat="convert">
+        <div class="tool-badge">New</div>
+        <div class="tool-icon" style="--c:#ef4444">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="12" x2="12" y2="18"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+        </div>
+        <div class="tool-info">
+          <h3>Image to PDF</h3>
+          <p>Merge multiple images into one PDF document.</p>
+        </div>
+        <span class="tool-arrow">→</span>
+      </a>
+
+      <!-- Security -->
+      <a href="tool.html?t=blurface" class="tool-card" data-cat="security">
+        <div class="tool-icon" style="--c:#6366f1">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"/><path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+        </div>
+        <div class="tool-info">
+          <h3>Blur Faces</h3>
+          <p>AI-detect and blur faces, plates or private info automatically.</p>
+        </div>
+        <span class="tool-arrow">→</span>
+      </a>
+
+      <a href="tool.html?t=exif" class="tool-card" data-cat="security">
+        <div class="tool-badge">New</div>
+        <div class="tool-icon" style="--c:#f59e0b">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <div class="tool-info">
+          <h3>Remove EXIF Data</h3>
+          <p>Strip GPS location, device info & metadata from photos.</p>
+        </div>
+        <span class="tool-arrow">→</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why-section">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-text">
+        <h2>Built for speed,<br>privacy & power</h2>
+        <p>We built Logo Viking because every other image tool site is slow, ad-cluttered, or requires an account just to resize a photo. We said no to all that.</p>
+        <ul class="why-list">
+          <li><span class="check">✓</span> Most tools work entirely in your browser — your files never leave your device</li>
+          <li><span class="check">✓</span> Batch processing for all tools — 50 images at once</li>
+          <li><span class="check">✓</span> Files auto-deleted within 1 hour from our servers</li>
+          <li><span class="check">✓</span> API access for developers and automation workflows</li>
+        </ul>
+        <div class="trust-badges">
+          <div class="trust-badge">🔒 SSL Encrypted</div>
+          <div class="trust-badge">🇪🇺 GDPR Ready</div>
+          <div class="trust-badge">⚡ Edge CDN</div>
+        </div>
+      </div>
+      <div class="why-visual">
+        <div class="browser-mockup">
+          <div class="browser-bar">
+            <div class="browser-dots"><span></span><span></span><span></span></div>
+            <div class="browser-url">logoviking.com/compress</div>
+          </div>
+          <div class="browser-body">
+            <div class="mockup-dropzone">
+              <div class="mockup-icon">⬆</div>
+              <div class="mockup-text">Drop images here</div>
+              <div class="mockup-sub">JPG, PNG, WEBP, GIF, HEIC</div>
+            </div>
+            <div class="mockup-result">
+              <div class="mockup-file">
+                <span class="file-name">photo.jpg</span>
+                <span class="file-savings">−72%</span>
+              </div>
+              <div class="mockup-file">
+                <span class="file-name">banner.png</span>
+                <span class="file-savings">−58%</span>
+              </div>
+              <div class="mockup-file">
+                <span class="file-name">logo.webp</span>
+                <span class="file-savings">−41%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing-section" id="pricing">
+  <div class="container">
+    <div class="section-header">
+      <h2>Simple, honest pricing</h2>
+      <p>Start free. Upgrade when you need more power.</p>
+    </div>
+    <div class="toggle-billing">
+      <span class="bill-label active" id="monthlyLabel">Monthly</span>
+      <label class="toggle-switch">
+        <input type="checkbox" id="billingToggle">
+        <span class="slider"></span>
+      </label>
+      <span class="bill-label" id="yearlyLabel">Yearly <em class="save-badge">Save 30%</em></span>
+    </div>
+    <div class="plans-grid">
+      <div class="plan-card">
+        <div class="plan-name">Free</div>
+        <div class="plan-price"><span class="price-num">$0</span><span class="price-per">/mo</span></div>
+        <p class="plan-desc">Perfect for casual use</p>
+        <ul class="plan-features">
+          <li>✓ All 16 tools</li>
+          <li>✓ Up to 15 files/day</li>
+          <li>✓ Max 20MB per file</li>
+          <li>✓ Standard processing</li>
+          <li class="dim">✗ Batch processing</li>
+          <li class="dim">✗ API access</li>
+          <li class="dim">✗ Priority support</li>
+        </ul>
+        <a href="register.html" class="plan-cta plan-cta-ghost">Get started free</a>
+      </div>
+
+      <div class="plan-card plan-featured">
+        <div class="plan-popular">Most Popular</div>
+        <div class="plan-name">Pro</div>
+        <div class="plan-price">
+          <span class="price-num" id="proPrice">$9</span><span class="price-per">/mo</span>
+        </div>
+        <p class="plan-desc">For creators & freelancers</p>
+        <ul class="plan-features">
+          <li>✓ All 16 tools</li>
+          <li>✓ Unlimited files/day</li>
+          <li>✓ Max 200MB per file</li>
+          <li>✓ Fast processing queue</li>
+          <li>✓ Batch up to 200 files</li>
+          <li>✓ API access (5,000 req/mo)</li>
+          <li class="dim">✗ Priority support</li>
+        </ul>
+        <a href="register.html?plan=pro" class="plan-cta">Start Pro — 7 days free</a>
+      </div>
+
+      <div class="plan-card">
+        <div class="plan-name">Business</div>
+        <div class="plan-price">
+          <span class="price-num" id="bizPrice">$29</span><span class="price-per">/mo</span>
+        </div>
+        <p class="plan-desc">For teams & high-volume</p>
+        <ul class="plan-features">
+          <li>✓ Everything in Pro</li>
+          <li>✓ Unlimited batch size</li>
+          <li>✓ Max 1GB per file</li>
+          <li>✓ Priority processing</li>
+          <li>✓ API (50,000 req/mo)</li>
+          <li>✓ 5 team seats</li>
+          <li>✓ Priority email support</li>
+        </ul>
+        <a href="register.html?plan=business" class="plan-cta plan-cta-ghost">Start Business</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <div class="container">
+    <h2>Loved by creators</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"Logo Viking replaced three separate tools I was paying for. The batch compression alone saves me an hour a week."</p>
+        <div class="testimonial-author">
+          <div class="avatar" style="background:#6366f1">JM</div>
+          <div><strong>Jamie M.</strong><span>Product Designer</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"The EXIF remover and blur-face tools are incredibly useful for a privacy-conscious photographer like me."</p>
+        <div class="testimonial-author">
+          <div class="avatar" style="background:#ec4899">SR</div>
+          <div><strong>Sara R.</strong><span>Photographer</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"Finally a tool that converts to WebP AND AVIF. My Lighthouse scores jumped 20 points after switching."</p>
+        <div class="testimonial-author">
+          <div class="avatar" style="background:#f59e0b">DK</div>
+          <div><strong>Dev K.</strong><span>Frontend Engineer</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- API CTA -->
+<section class="api-section">
+  <div class="container">
+    <div class="api-card">
+      <div class="api-text">
+        <h2>Build with the Logo Viking API</h2>
+        <p>Integrate all 16 image tools into your app or workflow. RESTful API with SDKs for Node.js, Python, PHP and more.</p>
+        <a href="api.html" class="btn-primary">Explore the API →</a>
+      </div>
+      <div class="api-code">
+        <div class="code-header"><span>Node.js</span></div>
+        <pre><code><span class="c-key">const</span> logoviking = <span class="c-fn">require</span>(<span class="c-str">'logoviking-api'</span>);
+
+<span class="c-key">const</span> result = <span class="c-key">await</span> logoviking.compress({
+  file: <span class="c-str">'./photo.jpg'</span>,
+  quality: <span class="c-num">80</span>,
+  format: <span class="c-str">'webp'</span>
+});
+
+console.<span class="c-fn">log</span>(result.savedBytes); <span class="c-comment">// 48320</span></code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Frequently asked questions</h2>
+    </div>
+    <div class="faq-list" id="faqList">
+      <div class="faq-item">
+        <button class="faq-q">Are my images stored on your servers?<span>+</span></button>
+        <div class="faq-a"><p>For client-side tools (compress, resize, crop, rotate), your files never leave your browser. For AI-powered tools (upscale, remove background), files are temporarily uploaded, processed, and deleted within 60 minutes.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How many images can I process for free?<span>+</span></button>
+        <div class="faq-a"><p>Free accounts can process up to 15 files per day, with a maximum file size of 20MB each. Pro and Business plans remove these limits entirely.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can I cancel my subscription anytime?<span>+</span></button>
+        <div class="faq-a"><p>Yes, absolutely. Cancel anytime with one click from your account dashboard. You'll retain Pro access until the end of your billing period.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do you offer refunds?<span>+</span></button>
+        <div class="faq-a"><p>We offer a 14-day money-back guarantee on all paid plans. No questions asked.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Is there an affiliate program?<span>+</span></button>
+        <div class="faq-a"><p>Yes! Our affiliate program pays 30% recurring commission for each customer you refer. Join at affiliates.logoviking.com.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">⚔</span>
+          <span>Logo<strong>Viking</strong></span>
+        </a>
+        <p>Powerful free image tools for designers & creators. No installs, no fuss.</p>
+        <div class="social-links">
+          <a href="#" title="Twitter">𝕏</a>
+          <a href="#" title="GitHub">⌨</a>
+          <a href="#" title="Discord">◈</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Tools</h4>
+        <a href="tool.html?t=compress">Compress</a>
+        <a href="tool.html?t=resize">Resize</a>
+        <a href="tool.html?t=crop">Crop</a>
+        <a href="tool.html?t=removebg">Remove Background</a>
+        <a href="tool.html?t=upscale">AI Upscale</a>
+        <a href="tool.html?t=towebp">To WebP</a>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="pricing.html">Pricing</a>
+        <a href="api.html">API Docs</a>
+        <a href="#">Changelog</a>
+        <a href="#">Blog</a>
+        <a href="#">Affiliate Program</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#">About us</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Security</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 LogoViking. All rights reserved.</span>
+      <span>Made with ♥ for the web</span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
