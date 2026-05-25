@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing | Logoviking</title>
+    <link rel="stylesheet" href="/style.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+        .pricing-header {
+            text-align: center;
+            padding: 60px 20px;
+            background: #111;
+            color: white;
+        }
+        .pricing-header h1 {
+            margin: 0;
+            font-size: 42px;
+        }
+        .pricing-header p {
+            margin-top: 10px;
+            font-size: 18px;
+            opacity: 0.8;
+        }
+        .pricing-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            display: flex;
+            gap: 20px;
+            padding: 0 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .plan {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            width: 300px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .plan h2 {
+            margin: 0;
+            font-size: 26px;
+        }
+        .price {
+            font-size: 40px;
+            margin: 20px 0;
+            color: #111;
+        }
+        .plan ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            text-align: left;
+        }
+        .plan ul li {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 20px;
+            background: #111;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background: #333;
+        }
+        .popular {
+            border: 2px solid #111;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="pricing-header">
+        <h1>Choose Your Plan</h1>
+        <p>Simple pricing for creators, designers, and businesses.</p>
+    </div>
+
+    <div class="pricing-container">
+
+        <div class="plan">
+            <h2>Free</h2>
+            <div class="price">$0</div>
+            <ul>
+                <li>✔ Access to 16 free tools</li>
+                <li>✔ Basic exports</li>
+                <li>✔ No account required</li>
+                <li>✖ No premium features</li>
+            </ul>
+            <a class="btn" href="/tool.html">Start Free</a>
+        </div>
+
+        <div class="plan popular">
+            <h2>Pro</h2>
+            <div class="price">$9/mo</div>
+            <ul>
+                <li>✔ All free tools</li>
+                <li>✔ HD exports</li>
+                <li>✔ No ads</li>
+                <li>✔ Priority processing</li>
+                <li>✔ Early access to new tools</li>
+            </ul>
+            <a class="btn" href="/register.html">Go Pro</a>
+        </div>
+
+        <div class="plan">
+            <h2>Business</h2>
+            <div class="price">$29/mo</div>
+            <ul>
+                <li>✔ Everything in Pro</li>
+                <li>✔ Team accounts</li>
+                <li>✔ API access</li>
+                <li>✔ Unlimited usage</li>
+                <li>✔ Dedicated support</li>
+            </ul>
+            <a class="btn" href="/register.html">Get Business</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
